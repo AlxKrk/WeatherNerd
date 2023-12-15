@@ -28,7 +28,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 def main() -> None:
-    application = Application.builder().token("6434773479:AAFdqFqoXUrR5SCgyWfiVj_jfUK20dIZXWg").build()
+    application = Application.builder().token("ТОКЕН ЗДЕСЬ").build()
 
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help_command))
