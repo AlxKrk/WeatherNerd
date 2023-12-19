@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 
 def draw_graph(timestamps, values) -> None:
+    '''Рисует график по полученным значениям осей'''
     # Создание графика
     plt.figure(figsize=(10, 6))
     plt.plot(timestamps, values, marker='o')
