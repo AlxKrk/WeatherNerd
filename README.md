@@ -1,2 +1,3 @@
 # WeatherNerd
-owo
+## @WeatherNerdBot
+Бот для отслеживания погоды
