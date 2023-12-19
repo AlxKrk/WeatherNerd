@@ -3,9 +3,9 @@ from .data import users, cities, dump_json, get_weather, update_user_location
 from .drawing import draw_graph
 from .__init__ import keyboard
 
-def run_bot(bot):
+def run_bot(bot) -> None:
     @bot.message_handler(commands=['start'])
-    def start(message):
+    def start(message) -> None:
 
         button = types.KeyboardButton('Погода')
         keyboard.add(button)
@@ -21,7 +21,7 @@ def run_bot(bot):
         bot.send_message(message.chat.id, 'Привет!', reply_markup=keyboard)
 
     @bot.message_handler(content_types=['location'])
-    def get_user_location(message):
+    def get_user_location(message) -> None:
         chat_id = str(message.chat.id)
 
         if chat_id in users:
@@ -39,7 +39,7 @@ def run_bot(bot):
             bot.reply_to(message, 'Местоположение обновлено')
 
     @bot.message_handler(func=lambda message: True)
-    def response(message):
+    def response(message) -> None:
         chat_id = str(message.chat.id)
 
         weather = get_weather(chat_id)
@@ -72,7 +72,7 @@ def run_bot(bot):
         if reply != '':
             bot.reply_to(message, reply)
 
-    def get_city_location(message):
+    def get_city_location(message) -> None:
         chat_id = str(message.chat.id)
 
         city = message.text

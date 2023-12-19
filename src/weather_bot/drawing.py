@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def draw_graph(timestamps, values):
+def draw_graph(timestamps, values) -> None:
     # Создание графика
     plt.figure(figsize=(10, 6))
     plt.plot(timestamps, values, marker='o')
