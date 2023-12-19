@@ -21,7 +21,7 @@ def run_bot(bot):
         bot.send_message(message.chat.id, 'Привет!', reply_markup=keyboard)
 
     @bot.message_handler(content_types=['location'])
-    def my_location(message):
+    def get_user_location(message):
         chat_id = str(message.chat.id)
 
         if chat_id in users:
