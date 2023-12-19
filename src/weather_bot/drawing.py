@@ -15,4 +15,4 @@ def draw_graph(timestamps, values):
     plt.grid(True)
 
     #сохраняем в файл
-    plt.savefig('weather_bot/databases/graph.png')
+    plt.savefig('weather_bot/graphs/graph.png')

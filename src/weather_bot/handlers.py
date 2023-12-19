@@ -50,7 +50,7 @@ def run_bot(bot):
                 timestamps = weather['hourly']['time'][:24]
                 temperatures = weather['hourly']['temperature_2m'][:24]
                 draw_graph(timestamps, temperatures)
-                bot.send_photo(message.chat.id, types.InputFile('weather_bot/databases/graph.png'))
+                bot.send_photo(message.chat.id, types.InputFile('weather_bot/graphs/graph.png'))
             case 'Температура':
                 if chat_id in users:
                     temperature = weather['current']['temperature_2m']
