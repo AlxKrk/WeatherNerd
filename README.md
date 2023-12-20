@@ -54,5 +54,3 @@
 - [Алексей Кураков](https://vk.com/id304862708)
 - [Илья Скоморохов](https://vk.com/lekasy)
 - [Шахин Агаев](https://vk.com/sahinagaev)
-
-## Источники
