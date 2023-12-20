@@ -54,10 +54,10 @@ def run_bot(bot) -> None:
             case 'Температура':
                 if chat_id in users:
                     temperature = weather['current']['temperature_2m']
-                    reaction = ['💀', '🥶', '😖', '😬', '🙁', '😐', '🙂', '😚', '😅', '🥵']
+                    reactions = ['💀', '🥶', '😖', '😬', '🙁', '😐', '🙂', '😚', '😅', '🥵']
                     i = int((temperature + 40)/10)
                     i *= (i > 0)*(i < 10)
-                    reply = reaction[i] + str(temperature) + ' °C' + reaction[i]
+                    reply = reactions[i] + str(temperature) + ' °C' + reactions[i]
                 else:
                     bot.reply_to(message, 'Сначала передайте мне свое местоположение')
             case 'Скорость Ветра':
