@@ -6,7 +6,6 @@ def load_json(path) -> dict:
     file = open(path)
     json_file = json.load(file) 
     file.close()
-    print(type(json_file))
     return json_file
 
 def dump_json(json_file, path) -> None:
