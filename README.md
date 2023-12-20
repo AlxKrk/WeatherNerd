@@ -12,9 +12,11 @@
 - [Команда проекта](#команда-проекта)
 
 ## Технологии
-- [GatsbyJS](https://www.gatsbyjs.com/)
-- [TypeScript](https://www.typescriptlang.org/)
-- ...
+- [Python](https://www.python.org/)
+- [VS Code](https://code.visualstudio.com/)
+- [pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/)
+- [matplotlib](https://matplotlib.org/)
+- [Open-Meteo Weather API](https://open-meteo.com/)
 
 ## Использование
 Преимущества использования бота для получения погоды в Telegram для пользователя:
