@@ -27,13 +27,17 @@ def run_bot(bot) -> None:
         if chat_id in users:
             update_user_location(chat_id, message.location.latitude, message.location.longitude)
         else:
-            new_user = {
-                    chat_id: {
-                        'latitude': message.location.latitude,
-                        'longitude': message.location.longitude
-                    }
+            # new_user = {
+            #         chat_id: {
+            #             'latitude': message.location.latitude,
+            #             'longitude': message.location.longitude
+            #         }
+            # }
+            # users.append(new_user)
+            users[chat_id] = {
+                'latitude': message.location.latitude,
+                'longitude': message.location.longitude
             }
-            users.append(new_user)
 
             dump_json(users, 'weather_bot/databases/users.json')
             bot.reply_to(message, 'Местоположение обновлено')
