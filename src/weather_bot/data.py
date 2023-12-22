@@ -19,10 +19,13 @@ cities = load_json('weather_bot/databases/cities.json')
 
 def get_weather(chat_id) -> dict:
     '''по координатам пользователя, возвращает dict с информацией о погоде'''
-    url = f'https://api.open-meteo.com/v1/forecast?latitude={users[chat_id]['latitude']}&longitude={users[chat_id]['longitude']}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m'
-    response = requests.get(url)
-    weather_data = response.json()
-    return weather_data
+    if chat_id in users:
+        url = f'https://api.open-meteo.com/v1/forecast?latitude={users[chat_id]['latitude']}&longitude={users[chat_id]['longitude']}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m'
+        response = requests.get(url)
+        weather_data = response.json()
+        return weather_data
+    else:
+        return None
 
 def update_user_location(chat_id, latitude, longtitude) -> None:
     users[chat_id]['latitude'] = latitude

@@ -48,6 +48,10 @@ def run_bot(bot) -> None:
 
         weather = get_weather(chat_id)
 
+        if weather is None:
+            bot.reply_to(message, "Отправьте своё местоположение или выберите город")
+            return None
+
         reply = ''
         match message.text:
             case 'Погода':
